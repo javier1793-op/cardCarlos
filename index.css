@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica&display=swap');
+
+body{
+    background-color: #566573;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 1rem;
+}
+
+.card{
+    position: relative;
+    background-color:  #1c2833;
+    width: 360px;
+    height: 420px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+
+.card-inner{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 8px;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, .05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Geologica', sans-serif;
+}
+
+.circulo{
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: 2s ease-in infinite alternate;
+}
+
+.circulo:nth-child(1){
+    width: 120px;
+    height: 120px;
+    top: -50px;
+    left: -50px;
+    background: linear-gradient(
+        #f7dc6f, #d68910
+    );
+    animation-name: move-up;
+}
+
+.circulo:nth-child(2){
+    width: 180px;
+    height: 180px;
+    bottom: -80px;
+    right: -80px;
+    background: linear-gradient(
+        #5dade2, #229954
+    );
+    animation-name: move-down;
+}
+@keyframes move-up {
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes move-down {
+    to {
+        transform: translateY(10px);
+    }
+}
+
+img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+.card .social-icons i {
+    cursor: pointer;
+    color: #ddd;
+    margin: 0 8px;
+    font-size: 22px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: .2s;
+}
+
+.card:hover .social-icons i {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+.card .social-icons i:hover {
+    color: #e48307;
+}
+
+.card .social-icons i:nth-child(1) {
+    transition-delay: .1s;
+}
+
+.card .social-icons i:nth-child(2) {
+    transition-delay: .2s;
+}
+
+.card .social-icons i:nth-child(3) {
+    transition-delay: .3s;
+}
+
+.card .social-icons i:nth-child(4) {
+    transition-delay: .4s;
+}
